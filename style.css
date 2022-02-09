@@ -1,0 +1,184 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* Colors */
+
+:root {
+  /* Primary */
+
+  --stong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-gray-cyan: hsl(186, 14%, 43%);
+  --dark-gray-cyan2: hsl(184, 14%, 56%);
+  --light-gray-cyan: hsl(185, 41%, 84%);
+  --light-gray-cyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: var(--light-gray-cyan);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin-bottom: -1rem;
+}
+
+.container {
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 20px 20px 0px 0px;
+}
+
+.bill {
+  margin: 2rem 2rem;
+}
+
+p {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--dark-gray-cyan);
+  margin-bottom: 10px;
+}
+
+#billInput {
+  background: url(./images/icon-dollar.svg);
+  background-color: var(--light-gray-cyan2);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  border: 1px solid var(--light-gray-cyan2);
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  height: 35px;
+  color: var(--very-dark-cyan);
+  width: 300px;
+  direction: rtl;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+#billInput[type="number"]:focus {
+  border: 1px solid var(--stong-cyan);
+}
+#billInput::-webkit-outer-spin-button,
+#billInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#billInput[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.tip {
+  margin-left: 2rem;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  align-items: center;
+  grid-row-gap: 1rem;
+}
+.btn {
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  border: 1px solid var(--very-dark-cyan);
+  border-radius: 5px;
+}
+.btn:focus,
+.btn:hover {
+  background-color: var(--stong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.custom {
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--light-gray-cyan2);
+  color: var(--dark-gray-cyan);
+  border: 1px solid var(--light-gray-cyan2);
+  border-radius: 5px;
+  direction: rtl;
+}
+.custom:focus {
+  outline: none !important;
+  border: 1px solid var(--stong-cyan);
+}
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+.people {
+  margin: 2rem 2rem;
+}
+
+#peopleInput {
+  background: url(./images/icon-person.svg);
+  background-color: var(--light-gray-cyan2);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  border: 1px solid var(--light-gray-cyan2);
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  height: 35px;
+  color: var(--very-dark-cyan);
+  width: 300px;
+  direction: rtl;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+#peopleInput::-webkit-outer-spin-button,
+#billInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#peopleInput[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#peopleInput:focus {
+  outline: none !important;
+  border: 1px solid var(--stong-cyan);
+}
