@@ -25,22 +25,26 @@
   <div class="container">
   <div class="bill">
     <p>Bill</p>
-    <input id="billInput" type="number">
+    <input id="billInput" type="number" value="">
  </div>
  <div class="tip">
    <p>Select Tip %</p>
-   <div class="buttons">
-     <button class="btn" id="5">5%</button>
-     <button class="btn" id="10">10%</button>
-     <button class="btn" id="15">15%</button>
-     <button class="btn" id="20">25%</button>
-     <button class="btn" id="50">50%</button>
-     <input type="number" class="custom" placeholder="Custom">
+   <div class="buttons" id="buttons">
+     <button class="btn" id="5" value="5">5%</button>
+     <button class="btn" id="10" value="10">10%</button>
+     <button class="btn" id="15" value="15">15%</button>
+     <button class="btn" id="20" value="25">25%</button>
+     <button class="btn" id="50" value="50">50%</button>
+     <input type="number" id="custom" class="custom" placeholder="Custom">
    </div>
  </div>
  <div class="people">
-   <p>Number of People</p>
+   <p>Number of People 
+    <span class="error hide-error" id="error">Can`t be zero</span>
+   </p>
+   
    <input id="peopleInput" type="number">
+   
  </div>
  <div class="result-container">
    <div class="amount">
@@ -55,8 +59,8 @@
     
   </div>
   <div class="results">
-    <span id="tipAmount">4.27</span>
-    <span id="total">32.79</span>
+    <span id="tipResult">0</span>
+    <span id="totalResult">0</span>
   </div>
    <button id="reset">RESET</button>
  </div>

@@ -191,6 +191,13 @@ p {
   border: 1px solid var(--stong-cyan);
 }
 
+.error {
+  color: red;
+  margin-left: 20px;
+}
+.hide-error {
+  display: none;
+}
 .result-container {
   display: flex;
   flex-direction: row;
@@ -242,4 +249,17 @@ p {
 
 #reset:hover {
   background-color: var(--light-gray-cyan);
+}
+
+/* Media Queries */
+
+@media (min-width: 1020px) {
+  body {
+    background-color: var(--light-gray-cyan);
+  }
+  .container {
+    width: 975px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
