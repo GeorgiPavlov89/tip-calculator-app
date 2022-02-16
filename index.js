@@ -11,7 +11,15 @@ const buttons = document.getElementById('buttons').onclick = calculateHandler
 
 
 function calculateHandler(e) {
-
+    const resetButton = document.getElementById('reset').addEventListener('click', resetHandler)
+    function resetHandler() {
+        totalResult.innerText = '$' + '0'
+        amountResult.innerText = "$" + '0'
+        peopleInput.value = null
+        billInput.value = null
+        customInput.value = null
+        peopleInput.style.borderColor = "hsl(189, 41%, 97%)"
+    }
     const custom = customInput.value
     const people = peopleInput.value
     const bill = billInput.value
@@ -20,9 +28,10 @@ function calculateHandler(e) {
     const partialBill = bill / people
     const total = partialBill + singleTip
     const error = document.getElementById('error')
-    if (people > 0 && custom == 0) {
 
-        peopleInput.style.borderColor = "hsl(172, 67%, 45%)"
+    if (people > 0) {
+
+
         amountResult.innerText = "$" + singleTip.toFixed(2)
         totalResult.innerText = "$" + total.toFixed(2)
         error.classList.add("hide-error")

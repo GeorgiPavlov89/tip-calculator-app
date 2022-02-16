@@ -44,6 +44,10 @@ header {
   background-color: var(--white);
   border: 1px solid var(--white);
   border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bill {
@@ -260,6 +264,34 @@ p {
   .container {
     width: 975px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid var(--white);
+    border-radius: 20px;
+  }
+  .containerInputs {
+    width: 460px;
+  }
+  .result-container {
+    width: 420px;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons {
+    display: inline-block;
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
+  #billInput,
+  #peopleInput {
+    width: 375px;
+  }
+  .amount {
+    margin-right: 5rem;
+  }
+  .results {
+    font-size: 36px;
   }
 }

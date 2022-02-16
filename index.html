@@ -11,7 +11,7 @@
   <script src="index.js" defer></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 2rem }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -23,6 +23,7 @@
     <img src="./images/logo.svg" alt="logo">
   </header>
   <div class="container">
+    <div class="containerInputs">
   <div class="bill">
     <p>Bill</p>
     <input id="billInput" type="number" value="">
@@ -43,9 +44,10 @@
     <span class="error hide-error" id="error">Can`t be zero</span>
    </p>
    
-   <input id="peopleInput" type="number">
+   <input id="peopleInput" type="number" placeholder="">
    
  </div>
+</div>
  <div class="result-container">
    <div class="amount">
    <p>
@@ -59,8 +61,8 @@
     
   </div>
   <div class="results">
-    <span id="tipResult">0</span>
-    <span id="totalResult">0</span>
+    <span id="tipResult">$0</span>
+    <span id="totalResult">$0</span>
   </div>
    <button id="reset">RESET</button>
  </div>
@@ -89,7 +91,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/GeorgiPavlov89">Georgi Pavlov</a>.
   </div>
 </body>
 </html>
