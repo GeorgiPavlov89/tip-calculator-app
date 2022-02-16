@@ -7,9 +7,6 @@ const customInput = document.getElementById('custom')
 const buttons = document.getElementById('buttons').onclick = calculateHandler
 
 
-
-
-
 function calculateHandler(e) {
     const resetButton = document.getElementById('reset').addEventListener('click', resetHandler)
     function resetHandler() {
@@ -28,23 +25,15 @@ function calculateHandler(e) {
     const partialBill = bill / people
     const total = partialBill + singleTip
     const error = document.getElementById('error')
-
     if (people > 0) {
-
-
         amountResult.innerText = "$" + singleTip.toFixed(2)
         totalResult.innerText = "$" + total.toFixed(2)
         error.classList.add("hide-error")
     } else if (people > 0 && custom > 0) {
-
         const customTip = e.target.value / 100
         const singleCustomTip = (bill * customTip) / people
         amountResult.innerText = "$" + singleCustomTip.toFixed(2)
         totalResult.innerText = "$" + total.toFixed(2)
-
-
-
-
     } else {
         peopleInput.style.borderColor = "red"
         error.classList.remove("hide-error")

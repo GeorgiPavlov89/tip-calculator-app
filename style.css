@@ -21,14 +21,12 @@
   font-family: "Space Mono", monospace;
   margin: 0;
 }
-
-.main-container {
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 header {
   background-color: var(--light-gray-cyan);
   width: 100%;
@@ -38,7 +36,6 @@ header {
   height: 150px;
   margin-bottom: -1rem;
 }
-
 .container {
   width: 100%;
   background-color: var(--white);
@@ -49,18 +46,15 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 .bill {
   margin: 2rem 2rem;
 }
-
 p {
   font-weight: 700;
   font-size: 13px;
   color: var(--dark-gray-cyan);
   margin-bottom: 10px;
 }
-
 #billInput {
   background: url(./images/icon-dollar.svg);
   background-color: var(--light-gray-cyan2);
@@ -78,7 +72,6 @@ p {
   transition: 0.5s;
   outline: none;
 }
-
 #billInput[type="number"]:focus {
   border: 1px solid var(--stong-cyan);
 }
@@ -87,11 +80,9 @@ p {
   -webkit-appearance: none;
   margin: 0;
 }
-
 #billInput[type="number"] {
   -moz-appearance: textfield;
 }
-
 .tip {
   margin-left: 2rem;
 }
@@ -108,15 +99,15 @@ p {
   font-weight: 700;
   background-color: var(--very-dark-cyan);
   color: var(--white);
-  border: 1px solid var(--very-dark-cyan);
+  border: none;
   border-radius: 5px;
 }
 .btn:focus,
 .btn:hover {
   background-color: var(--stong-cyan);
   color: var(--very-dark-cyan);
+  cursor: pointer;
 }
-
 .custom {
   width: 120px;
   height: 40px;
@@ -140,7 +131,6 @@ p {
   -webkit-appearance: none;
   margin: 0;
 }
-
 .custom[type="number"] {
   -moz-appearance: textfield;
 }
@@ -148,20 +138,16 @@ p {
   /* Firefox 18- */
   text-align: center;
 }
-
 ::-moz-placeholder {
   /* Firefox 19+ */
   text-align: center;
 }
-
 :-ms-input-placeholder {
   text-align: center;
 }
-
 .people {
   margin: 2rem 2rem;
 }
-
 #peopleInput {
   background: url(./images/icon-person.svg);
   background-color: var(--light-gray-cyan2);
@@ -179,22 +165,18 @@ p {
   transition: 0.5s;
   outline: none;
 }
-
 #peopleInput::-webkit-outer-spin-button,
 #billInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 #peopleInput[type="number"] {
   -moz-appearance: textfield;
 }
-
 #peopleInput:focus {
   outline: none !important;
   border: 1px solid var(--stong-cyan);
 }
-
 .error {
   color: red;
   margin-left: 20px;
@@ -250,9 +232,17 @@ p {
   border: 1px solid var(--stong-cyan);
   border-radius: 5px;
 }
-
 #reset:hover {
   background-color: var(--light-gray-cyan);
+  cursor: pointer;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /* Media Queries */
